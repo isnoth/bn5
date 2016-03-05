@@ -36,6 +36,8 @@ export class Node {
     };
     children.push(newId);
 
+    console.log('this.node.id', this.node.id)
+    console.log('this.node', this.node)
     this.rootVM.dirNodesRef.child(this.node.id).child("children").set(children);
   }
 

@@ -51,11 +51,13 @@ export class Tree extends Node{
     var dirNodesPath = '/notes/users/' + this.utility.getRealUserId(this.user_id) + '/directories/nodes';
     this.dirNodesRef = ref.child(dirNodesPath);
     var that = this;
-    this.dirNodesRef.child('root').on('value', function(dataSnapshot) {
+    console.log('dirNodesPath:', dirNodesPath)
+    console.log('dirNodesRef:', this.dirNodesRef)
+    //this.dirNodesRef.child('').on('value', funcroottion(dataSnapshot) {
+    this.dirNodesRef.child('BN-1457182716731-2uKsc').on('value', function(dataSnapshot) {
       if (that.rootVM.editing) return;
-      // console.log("dataSnapshot.val()")
       that.node = dataSnapshot.val();
-      // console.log(that.node)
+      console.log("dataSnapshot.val()", that.node)
     });
 
     if (params.frameVM) {

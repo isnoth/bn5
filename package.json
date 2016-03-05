@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/boogunote/bn5/issues"
   },
+  "scripts":{
+    "start": "gulp build && serve -p 8080"
+  },
   "license": "MIT",
   "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
   "main": "dist/commonjs/index.js",
