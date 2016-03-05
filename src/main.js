@@ -38,14 +38,13 @@ export class Main {
     this.user_id = tempList[tempList.length-1];
 
     this.infoRef = this.groupsRef = this.rootRef.child('/info/users/' + authData.uid);
-    console.log("infoRef url:", "/info/users/"+authData.uid )
 
     var that = this;
     this.infoRef.on('value', function(dataSnapshot) {
       if (that.utility.now() < that.lockTime) return;
 
       that.info = dataSnapshot.val();
-      console.log("that.info", that.info)
+      console.log(that.info)
       if (typeof that.info.mainwindow == 'undefined')
         that.info.mainwindow = {}
       if (typeof that.info.mainwindow.tabs == 'undefined')

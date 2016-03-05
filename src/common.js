@@ -1,7 +1,6 @@
 export class Common {
   constructor(){
-    this.firebase_url = "https://burning-torch-9051.firebaseio.com/";
-
+    this.firebase_url = "https://bn.firebaseio.com";
 
     this.new_tree_note_skeleton = {
         meta: {
